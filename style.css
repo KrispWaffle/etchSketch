@@ -1,0 +1,15 @@
+
+body{
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.squareCont{
+    display: grid;
+    width: 40rem;
+    height: 40rem;
+   
+    border: 1px solid black;
+    
+}
