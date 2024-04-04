@@ -1,15 +1,23 @@
-
-body{
-    display: flex; 
+body {
+    display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    height: 100vh; /* Ensure the body takes up the full viewport height */
+    margin: 0; /* Remove default margin */
 }
-.squareCont{
+
+.squareCont {
     display: grid;
     width: 40rem;
     height: 40rem;
-   
-    border: 1px solid black;
-    
+    border: 2px solid black;
+    margin-bottom: 20px; /* Add margin at the bottom of the drawing area */
+    margin-top: 10px; /* Add margin at the top of the drawing area */
+    margin-right: auto; /* Center the grid horizontally within its container */
+    margin-left: auto;
+}
+
+button {
+    margin-top: 10px; /* Add margin at the top of the button */
 }

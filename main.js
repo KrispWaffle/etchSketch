@@ -1,9 +1,33 @@
 document.addEventListener("DOMContentLoaded", function(){
   createBoard(32)
-})
+ 
 
+});
+const size = document.getElementById("size")
 const eraseButton = document.getElementById("eraseB")
-eraseButton.addEventListener
+
+eraseButton.addEventListener("click",erase);
+size.addEventListener("click",gsize);
+
+ 
+
+function erase(){
+    let divs = document.querySelectorAll(".squareCont div");
+    divs.forEach(div => {
+        div.style.backgroundColor = "white";
+    });
+  }
+  function gsize(){
+    let gridSize = prompt("Choose a size for the grid")
+    
+    if(gridSize >= 100){
+        alert("Too big try again")
+        gridSize = 32
+    }
+    createBoard(gridSize);
+  }  
+
+
 function createBoard(size){
     let board = document.querySelector(".squareCont");
     
@@ -35,7 +59,3 @@ function createBoard(size){
 
 
 
-function erase(){
-    let div = document.createElement("div");
-        div.style.backgroundColor = "white"
-}
